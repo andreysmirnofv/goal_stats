@@ -1,0 +1,10 @@
+[
+    {
+        "command": "/start",
+        "description": "Начать"
+    },
+    {
+        "command": "/get",
+        "description": "Получить статистику матчей"
+    }
+]

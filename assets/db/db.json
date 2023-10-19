@@ -1,0 +1,11 @@
+[
+	{
+		"league": "world wide cup",
+		"country": "africa",
+      "goals": 40
+	},
+   {
+      "country2": "mexico",
+      "goals2": 42
+   }
+]
