@@ -9,16 +9,13 @@ const db = require("./assets/db/country/country.json")
 function addCountryAndLeague(msg) {
   const text = msg.text;
 
-  // Проверяем, если есть название страны
   if (!country) {
     country = text;
   } else {
     league = text;
 
-    // Добавляем новую запись в массив
     db.push({league, country });
 
-    // Записываем обновленный массив в JSON-файл
     fs.writeFileSync('./assets/db/db.json', JSON.stringify(db, null, "\t"));
 
     bot.sendMessage(msg.chat.id, "Страна и лига добавлены.");
@@ -46,10 +43,4 @@ bot.on('message', async(msg) => {
   }
 });
 
-// bot.on('callback_query', async (callbackQuery) => {
-//   if (callbackQuery.data){
-//   } else {
-//     console.error("Некорректные данные в callbackQuery");
-//   }
-// })
 bot.on('polling_error', console.log);
